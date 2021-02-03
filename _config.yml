@@ -13,7 +13,7 @@ header:
   pages:
     - name: Home
       slug: /
-    - name: Ryu Matsuura
+    - name: Research
     - name: CV
       slug: "https://ryumatsuura.github.io/files/ryumatsuura_cv.pdf"
 
