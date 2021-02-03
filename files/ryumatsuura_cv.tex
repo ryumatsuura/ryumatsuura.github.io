@@ -1,0 +1,100 @@
+\documentclass[6pt]{article}
+\usepackage[hmargin=2cm, vmargin=1.5cm]{geometry}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=cyan,
+}
+\urlstyle{same}
+\title{\bfseries\LARGE Ryu Matsuura}
+%\author{
+%	My address \\
+%	Second address \\
+%}
+\date{}
+
+\usepackage{array, xcolor}
+\usepackage{natbib, bibentry}
+\usepackage{titlesec}
+
+\definecolor{lightgray}{gray}{0.8}
+\newcolumntype{L}{>{\raggedleft}p{0.13\textwidth}}
+\newcolumntype{R}{p{0.84\textwidth}}
+\newcommand\VRule{\color{lightgray}\vrule width 0.5pt}
+
+\titleformat{\section}
+	{\normalfont\fontsize{12}{10}\bfseries}{\thesection}{1em}{}
+	
+\begin{document}
+\maketitle
+\vspace{-1.5cm}
+
+\begin{minipage}[ht]{1\textwidth}
+%	\strut\hspace{10cm} \textbf{Nationality: Japanese}\\
+%	\strut\hspace{10cm} \textbf{Birth of date: January 23, 1994}
+	\strut\hspace*{\fill} \url{https://ryumatsuura.github.io} \\
+  	\strut\hspace*{\fill} \href{mailto:ryumatsuura@u.northwestern.edu}{ryumatsuura@u.northwestern.edu}
+\end{minipage}
+
+\section*{Education}{\large}
+	\begin{tabular}{L!{\VRule}R}
+		2019--Present & PhD in Economics, Northwestern University \\[5pt]
+		2020 & MA in Economics, Northwestern University \\[5pt]
+		2017 & BA in Economics and Mathematical Science, Colby College (\textit{Summa Cum Laude})\\
+	                   	   & \hspace{10pt} Honors in Economics, Distinction in Economics and Mathematical Science \\
+%%		2015--2016 & Visiting Student Program, University of Oxford \\[5pt]
+%%		2015 & Summer Program, University of California, Davis \\
+	\end{tabular}
+
+\section*{Publications}
+	\begin{tabular}{L!{\VRule}R}
+		2018 & \textbf{Shifted Baselines Reduce Willingness to Pay for Conservation} (with Loren McClenachan, Shah Payal, and Sahan Dissanayake), \textit{Frontiers in Marine Science} \\[5pt]
+		2016 & \textbf{The Proposed Park in Maine's North Woods: Preferences of Out-of-State Visitors} (with Sahan Dissanayake and Andrew Meyer), \textit{Maine Policy Review} \\
+	\end{tabular}
+
+\section*{Working Papers}
+\begin{tabular}{L!{\VRule}R}
+	 & \textbf{The Socioeconomic High-resolution Rural-Urban
+	Geographic Dataset on India (SHRUG)} (with Sam Asher, Toby Lunt, and Paul Novosad), Revise and Resubmit at \textit{World Bank Economic Review} \\[5pt]
+\end{tabular}
+
+\section*{Research Experience}{\tiny}
+\begin{tabular}{L!{\VRule}R}
+	2017--2019 & Research Assistant, The World Bank \& Dartmouth College \\
+	& \hspace{10pt} Supervised by Dr.\ Sam Asher and Dr.\ Paul Novosad \\
+\end{tabular}
+
+\section*{Presentations}
+	\begin{tabular}{L!{\VRule}R}
+		2017 & Maine Economic Conference \\[5pt]
+	    2016 & Heartland Environmental \& Resource Economic Workshop \\
+        
+    \end{tabular}
+
+\section*{Grants and Scholarship} 
+	\begin{tabular}{L!{\VRule}R}
+	2019-2021 & Japan-IMF Scholarship \\[5pt]
+	2016 & Leslie Dougherty Biddle $\mbox{'}$89 And George Biddle Fund For International Service Learning, Internships, And Research \\
+	\end{tabular}
+
+\section*{Awards}
+	\begin{tabular}{L!{\VRule}R}
+		2017 & Breckenridge Prize \\
+		        & \hspace{10pt} Awarded yearly to the senior economics majors with the highest GPA \\[5pt]
+				& Phi Beta Kappa \\
+				& \hspace{10pt} Awarded to the top 9\% of the senior class \\[5pt]
+		2016 & Department Prize for the Junior with the Highest GPA \\
+			     & \hspace{10pt} Awarded yearly to the junior economics majors with the highest GPA \\[5pt]
+	\end{tabular}		        
+		
+\section*{Skills}
+	\begin{tabular}{L!{\VRule}R}
+		Software & Stata, Matlab, R \\[5pt]
+		Programming & Python, Bash, HTML/CSS \\[5pt]
+		Technology &  \LaTeX, Emacs, QGIS, Google API \\[5pt]
+		Language & Japanese, English \\
+	\end{tabular}
+
+\end{document}

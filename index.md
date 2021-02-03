@@ -1,14 +1,18 @@
 ---
 layout: home
 profile_picture:
-  src: /assets/img/profile-pic.jpg
+  src: /assets/img/profile-pic.jpeg
   alt: website picture
 ---
 
 <p>
-  Welcome! This site serves as an example for the Bay Jekyll theme. Bay is a very simple and minimal theme, directly inspired by Dan Grover's <a href="http://dangrover.com">website</a>.
+I am a second-year economics PhD student at Northwestern University. My
+research interest lies at the intersection of development economics and economic 
+geography. 
 </p>
 
 <p>
-  You can find the source code and the instructions on <a href="https://github.com/eliottvincent/bay">GitHub</a>.
+I previously worked at <a href="http://www.devdatalab.org"/>Development Data Lab<a> as a research associate. I received my Bachelor's degree in Economics and Mathematical Science from Colby College in 2017.
 </p>
+
+
