@@ -6,8 +6,8 @@ slug: /research
 
 ## Publications
 
-[The Socioeconomic High-resolution Rural-Urban Geographic Dataset on
-India (SHRUG)](https://ryumatsuura.github.io/files/asher_et_al_2019_shrug.pdf){:target="_blank"} 
+[Development Research at High Geographic Resolution: An Analysis of Night Lights,
+Firms, and Poverty in India using the SHRUG Open Data Platform](https://ryumatsuura.github.io/files/asher_et_al_2020_shrug.pdf){:target="_blank"} 
 (with Sam Asher, Toby Lunt, and Paul Novosad), Forthcoming at _World Bank
 Economic Review_
 
