@@ -6,9 +6,8 @@ profile_picture:
 ---
 
 <p>
-I am a second-year economics PhD student at Northwestern University. My
-research interest lies at the intersection of development economics and economic 
-geography. 
+I am a thid-year economics PhD student at Northwestern University. My
+research interest lies at the intersection of development economics and political economy. 
 </p>
 
 <p>
