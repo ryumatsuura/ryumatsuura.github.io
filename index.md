@@ -6,7 +6,7 @@ profile_picture:
 ---
 
 <p>
-I am a rising thid-year economics PhD student at Northwestern University. My
+I am a thid-year economics PhD student at Northwestern University. My
 research interest lies at the intersection of development economics and political economy. 
 </p>
 
