@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  3 FEB 2021 10:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  24 NOV 2021 20:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -333,17 +333,17 @@ Overfull \hbox (9.48607pt too wide) in paragraph at lines 52--57
  []
 
 
-Overfull \hbox (9.48607pt too wide) in paragraph at lines 61--65
+Overfull \hbox (9.48607pt too wide) in paragraph at lines 61--64
 [] 
  []
 
 
-Overfull \hbox (9.48607pt too wide) in paragraph at lines 67--72
+Overfull \hbox (9.48607pt too wide) in paragraph at lines 66--71
 [] 
  []
 
 
-Overfull \hbox (9.48607pt too wide) in paragraph at lines 74--78
+Overfull \hbox (9.48607pt too wide) in paragraph at lines 73--78
 [] 
  []
 
@@ -377,13 +377,13 @@ Here is how much of TeX's memory you used:
  10109 multiletter control sequences out of 15000+600000
  7943 words of font info for 28 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,11n,35p,305b,320s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,11n,35p,290b,320s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
 usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr
 /local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on ryumatsuura_cv.pdf (2 pages, 76821 bytes).
+Output written on ryumatsuura_cv.pdf (2 pages, 76924 bytes).
 PDF statistics:
  39 PDF objects out of 1000 (max. 8388607)
  29 compressed objects within 1 object stream
