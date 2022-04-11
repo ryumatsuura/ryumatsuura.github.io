@@ -1,5 +1,11 @@
-\documentclass[6pt]{article}
-\usepackage[hmargin=2cm, vmargin=1.5cm]{geometry}
+\documentclass[11pt]{article}
+%\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{ragged2e}
+%\textheight=10in
+\pagestyle{empty}
+%\raggedbottom
 \usepackage{hyperref}
 \hypersetup{
 	colorlinks=true,
@@ -8,90 +14,139 @@
 	urlcolor=cyan,
 }
 \urlstyle{same}
-\title{\bfseries\LARGE Ryu Matsuura}
-%\author{
-%	My address \\
-%	Second address \\
-%}
-\date{}
+\raggedright
+\usepackage{fullpage}
 
-\usepackage{array, xcolor}
-\usepackage{natbib, bibentry}
-\usepackage{titlesec}
+\addtolength{\oddsidemargin}{-.2in}
+\addtolength{\evensidemargin}{-.2in}
+\addtolength{\textwidth}{.4in}
 
-\definecolor{lightgray}{gray}{0.8}
-\newcolumntype{L}{>{\raggedleft}p{0.13\textwidth}}
-\newcolumntype{R}{p{0.84\textwidth}}
-\newcommand\VRule{\color{lightgray}\vrule width 0.5pt}
+%\setlength{\topmargin}{2in}
 
-\titleformat{\section}
-	{\normalfont\fontsize{12}{10}\bfseries}{\thesection}{1em}{}
-	
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.5in}
+
+%  \renewcommand{\encodingdefault}{cg}
+  %\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+% DEFINITIONS FOR RESUME
+
+\newcommand{\tab}{\hspacet *{2em}}
+
+\newcommand{\area}[2]{\vspace*{-9pt} \begin{verse}\textbf{#1}   #2 \end{verse}  }
+\newcommand{\lineunder}{\vspace*{-8pt} \\ \hspace*{-18pt} \hrulefill \\}
+\newcommand{\header}[1]{{\hspace*{-15pt}\vspace*{6pt} \textsc{#1}} \vspace*{-6pt} \lineunder}
+\newcommand{\employer}[3]{{ \textbf{#1} \hfill #2\\ \textbf{\emph{#3}}\\  }}
+\newcommand{\employerwithguide}[4]{{ \textbf{#1} \hfill(#2)\\ \textbf{\emph{#3}}\\ \emph{#4}  }}
+\newcommand{\project}[3]{{ \textbf{#1} (#2)\\ \emph{#3}\\  }}
+\newcommand{\projectnoguide}[2]{{ \textbf{#1} (#2)\\  }}
+\newcommand{\contact}[2]{
+%\vspace*{-8pt}
+\begin{center}
+{\LARGE \scshape {#1}}\\
+%#2 \lineunder
+#2
+\end{center}
+\vspace*{-8pt}
+}
+\newcommand{\sbt}{\,\begin{picture}(-1,1)(-1,-3)\circle*{2}\end{picture}\ }
+\newcommand{\lbt}{\,\begin{picture}(-1,1)(-1,-3)\circle*{3}\end{picture}\ }
+\newenvironment{achievements}{
+    \begin{list}{$\lbt$}{
+        \topsep 0pt
+        \itemsep 0pt
+        \addtolength{\leftmargin}{-0.1in}
+    }
+}
+{
+    \vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses}[4]{
+ \textbf{#1} \hfill{#2}\\
+    #3\\
+\vspace*{5pt}
+}
+\newcommand{\school}[4]{
+ \textbf{#1} #2 $\bullet$ #3\\
+#4 \\
+}
+
+
+
+% END RESUME DEFINITIONS
+
 \begin{document}
-\maketitle
-\vspace{-1.5cm}
 
-\begin{minipage}[ht]{1\textwidth}
-%	\strut\hspace{10cm} \textbf{Nationality: Japanese}\\
-%	\strut\hspace{10cm} \textbf{Birth of date: January 23, 1994}
-	\strut\hspace*{\fill} \url{https://ryumatsuura.github.io} \\
-  	\strut\hspace*{\fill} \href{mailto:ryumatsuura@u.northwestern.edu}{ryumatsuura@u.northwestern.edu}
-\end{minipage}
+\pagenumbering{gobble}
 
-\section*{Education}{\large}
-	\begin{tabular}{L!{\VRule}R}
-		2019--Present & PhD in Economics, Northwestern University \\[5pt]
-		2020 & MA in Economics, Northwestern University \\[5pt]
-		2017 & BA in Economics and Mathematical Science, Colby College (\textit{Summa Cum Laude})\\
-	                   	   & \hspace{10pt} Honors in Economics, Distinction in Economics and Mathematical Science \\
-%%		2015--2016 & Visiting Student Program, University of Oxford \\[5pt]
-%%		2015 & Summer Program, University of California, Davis \\
-	\end{tabular}
+\small
+\smallskip
+\vspace*{-35pt}
 
-\section*{Publications}
-	\begin{tabular}{L!{\VRule}R}
-		2021 & \textbf{Development Research at High Geographic Resolution: An Analysis of Night Lights, Firms, and Poverty in India using the SHRUG Open Data Platform} (with Sam Asher, Toby Lunt, and Paul Novosad), \textit{World Bank Economic Review} \\[5pt]
-		2018 & \textbf{Shifted Baselines Reduce Willingness to Pay for Conservation} (with Loren McClenachan, Shah Payal, and Sahan Dissanayake), \textit{Frontiers in Marine Science} \\[5pt]
-		2016 & \textbf{The Proposed Park in Maine's North Woods: Preferences of Out-of-State Visitors} (with Sahan Dissanayake and Andrew Meyer), \textit{Maine Policy Review} \\
-	\end{tabular}
+\contact{Ryu Matsuura}
+{ryumatsuura@u.norothwestern.edu $\sbt$ \url{https://ryumatsuura.github.io}}
 
+\header{\textbf{Education}}
+\vspace{2mm}
+\schoolwithcourses{Northwestern University}{2025 (\textit{expected})}{\hspace{2mm} Ph.D. in Economics}
 
+\schoolwithcourses{Northwestern University}{2020}{\hspace{2mm} MA in Economics}
 
-\section*{Research Experience}{\tiny}
-\begin{tabular}{L!{\VRule}R}
-	2017--2019 & Research Associate, Development Data Lab \\
+\schoolwithcourses{Colby College}{2017}{\hspace{2mm} B.A. in Economics (\textit{Honors}) and Mathematical Science (\textit{Distinction)}, \textit{Summa Cum Laude}}
+\hfill{}
+
+\header{\textbf{Publications}}
+\vspace{2mm}
+\schoolwithcourses{Development Research at High Geographic Resolution: An Analysis of Night Lights, Firms, and Poverty in India Using the SHRUG Open Data Platform \textnormal{(with Sam Asher, Toby Lunt, and Paul Novosad), \textit{World Bank Economic Review} (2021)}}{}{~\vspace{-3mm}}  
+
+\schoolwithcourses{Shifted Baselines Reduce Willingness to Pay for Conservation \textnormal{(with Loren McClenachan,
+Shah Payal, and Sahan Dissanayake), \textit{Frontiers in Marine Science} (2018)}}{}{~\vspace{-3mm}} 
+
+\schoolwithcourses{The Proposed Park in Maine's North Woods: Preferences of Out-of-State Visitors \textnormal{(with Sahan Dissanayake and Andrew Meyer), \textit{Maine Policy Review} (2016)}}{}{~\vspace{-3mm}} 
+\hfill{}
+
+\header{\textbf{Research Experience}}
+\vspace{2mm}
+\schoolwithcourses{Development Data Lab}{2017-2019}{\hspace{2mm} Research Associate}
+\hfill{}
+
+\header{\textbf{Presentations}}
+\vspace{2mm}
+
+\begin{tabular}{l @{\hspace{10ex}} l }
+2022 & World Bank (Infra4Dev Conference) \\
+2017 & Colby College (Maine Economic Conference) \\
+2016 & University of Illinois Urbana-Champaign (Heartland Environmental and Resource Economic \\
+& Workshop)  \\
 \end{tabular}
+\vspace{2mm}
+\hfill{}
 
-\section*{Presentations}
-	\begin{tabular}{L!{\VRule}R}
-		2017 & Maine Economic Conference \\[5pt]
-	    2016 & Heartland Environmental \& Resource Economic Workshop \\
-        
-    \end{tabular}
+\header{\textbf{Grants \& Scholarship}}
+\vspace{2mm}
 
-\section*{Grants and Scholarship} 
-	\begin{tabular}{L!{\VRule}R}
-	2021-Present & Japan Student Service Organization Scholarship \\[5pt]
-	2019-2021 & Japan-IMF Scholarship \\[5pt]
-	2016 & Leslie Dougherty Biddle $\mbox{'}$89 And George Biddle Fund For International Service Learning, Internships, And Research \\
-	\end{tabular}
+\begin{tabular}{l @{\hspace{4.5ex}} l }
+2021-2024 & Japan Student Service Organization Scholarship \\
+2019-2021 & Japan IMF Scholarship \\
+2016 & Leslie Dougherty Biddle '89 and George Biddle Fund for International Service Learning, \\
+& Internships, and Research \\
+\end{tabular}
+\vspace{2mm}
+\hfill{}
 
-\section*{Awards}
-	\begin{tabular}{L!{\VRule}R}
-		2017 & Breckenridge Prize \\
-		        & \hspace{10pt} Awarded yearly to the senior economics majors with the highest GPA \\[5pt]
-				& Phi Beta Kappa \\
-				& \hspace{10pt} Awarded to the top 9\% of the senior class \\[5pt]
-		2016 & Department Prize for the Junior with the Highest GPA \\
-			     & \hspace{10pt} Awarded yearly to the junior economics majors with the highest GPA \\[5pt]
-	\end{tabular}		        
-		
-\section*{Skills}
-	\begin{tabular}{L!{\VRule}R}
-		Software & Stata, Matlab, R \\[5pt]
-		Programming & Python, Bash, HTML/CSS \\[5pt]
-		Technology &  \LaTeX, Emacs, QGIS, Google API \\[5pt]
-		Language & Japanese, English \\
-	\end{tabular}
+\header{\textbf{Awards}}
+\vspace{2mm}
+
+\begin{tabular}{l @{\hspace{10ex}} l }
+2017 & Breckenridge Prize (highest GPA among senior economic majors) \\
+& Phi Beta Kappa (top 9\% of senior class) \\
+2016 & Department Prize for Junior with Highest GPA \\
+\end{tabular}
+\vspace{2mm}
+\hfill{}
+
 
 \end{document}
