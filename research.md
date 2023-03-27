@@ -4,6 +4,10 @@ title: Research
 slug: /research
 ---
 
+## Work in Progress
+
+[Public Services Delivery to Muslim Villages by the BJP Government]
+
 ## Publications
 
 [Development Research at High Geographic Resolution: An Analysis of Night Lights,
