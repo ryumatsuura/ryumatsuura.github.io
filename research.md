@@ -6,7 +6,7 @@ slug: /research
 
 ## Work in Progress
 
-Public Services Delivery to Muslim Villages by the BJP Government
+Populism and Public Services Delivery
 
 ## Publications
 
