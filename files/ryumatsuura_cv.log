@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  27 MAR 2023 09:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  29 APR 2023 07:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -341,7 +341,7 @@ Here is how much of TeX's memory you used:
 usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmu10.pfb></us
 r/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.p
 fb>
-Output written on ryumatsuura_cv.pdf (1 page, 78932 bytes).
+Output written on ryumatsuura_cv.pdf (1 page, 78756 bytes).
 PDF statistics:
  38 PDF objects out of 1000 (max. 8388607)
  28 compressed objects within 1 object stream
