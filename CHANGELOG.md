@@ -2,6 +2,37 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.0.20](https://github.com/eliottvincent/bay/compare/v1.0.19...v1.0.20) (2023-10-19)
+
+### Features
+
+- Hide "Follow" section when no items in `footer.follow`
+
+### [1.0.19](https://github.com/eliottvincent/bay/compare/v1.0.18...v1.0.19) (2022-10-19)
+
+### Bug Fixes
+
+- Ensure `<strong>` tags are correctly rendered in Firefox
+
+### [1.0.18](https://github.com/eliottvincent/bay/compare/v1.0.17...v1.0.18) (2022-08-30)
+
+### Bug Fixes
+
+- Fix hamburger size
+- Update dependencies
+
+### [1.0.17](https://github.com/eliottvincent/bay/compare/v1.0.16...v1.0.17) (2021-06-05)
+
+### Features
+
+- Remove support for Retina-sized images
+
+### [1.0.16](https://github.com/eliottvincent/bay/compare/v1.0.15...v1.0.16) (2021-02-23)
+
+### Bug Fixes
+
+- Rework footer's elements sizing ([1f1384b](https://github.com/eliottvincent/bay/commit/1f1384b2cfc07bc152cb8e44756e5a0fcbfbef11)), closes [#5](https://github.com/eliottvincent/bay/issues/5)
+
 ### [1.0.15](https://github.com/eliottvincent/bay/compare/v1.0.14...v1.0.15) (2020-12-21)
 
 ### Features
