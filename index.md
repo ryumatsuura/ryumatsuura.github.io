@@ -16,6 +16,6 @@ research interest lies at the intersection of development economics and politica
 I previously worked at <a href="http://www.devdatalab.org">Development Data Lab</a> as a research associate. I received my Bachelor's degree in Economics and Mathematical Science from Colby College in 2017.
 </p>
 
-</p>
+<p>
 Please feel free to reach out to me at ryumatsuura [at] u.northwestern.edu!
 </p>
