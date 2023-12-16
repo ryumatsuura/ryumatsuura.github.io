@@ -6,11 +6,11 @@ slug: /research
 
 ## Work in Progress
 
-Populism and Public Services Delivery
+Harnessing Satellite Data to Improve Social Assistance Targeting in the Eastern Caribbean (with Sophia Chen, Flavien Moreau, and Joana Pereira)
 
 Political (Mis)selection: The Role of Historical Institutions (with Shubhro Bhattacharya and Utsav Manjeer)
 
-Harnessing Satellite Data to Improve Social Assistance Targeting in the Eastern Caribbean (with Sophia Chen, Flavien Moreau, and Joana Pereira)
+Populism and Public Services Delivery
 
 ## Publications
 

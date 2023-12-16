@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  6 NOV 2023 14:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  17 DEC 2023 00:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -312,26 +312,26 @@ LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
 [1
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 229.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 231.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.229 \end{document}
+l.231 \end{document}
                      [2
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 229.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 231.
  (./ryumatsuura_cv.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 229.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 229.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 231.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 231.
 Package rerunfilecheck Info: File `ryumatsuura_cv.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 229.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 231.
  ) 
 Here is how much of TeX's memory you used:
  5697 strings out of 492616
@@ -348,7 +348,7 @@ Here is how much of TeX's memory you used:
 usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmu10.pfb></us
 r/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.p
 fb>
-Output written on ryumatsuura_cv.pdf (2 pages, 80447 bytes).
+Output written on ryumatsuura_cv.pdf (2 pages, 80587 bytes).
 PDF statistics:
  41 PDF objects out of 1000 (max. 8388607)
  30 compressed objects within 1 object stream
