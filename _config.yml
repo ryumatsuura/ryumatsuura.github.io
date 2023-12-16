@@ -21,7 +21,6 @@ footer:
   show_powered_by: true
   contact:
     - name: Email
-      value: ryumatsuura@u.northwestern.edu
       link: mailto:ryumatsuura@u.northwestern.edu
 #    - name: WeChat
 #      value: YourWeChatUsername
