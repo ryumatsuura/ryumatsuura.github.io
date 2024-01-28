@@ -12,6 +12,8 @@ Political (Mis)selection: The Role of Historical Institutions (with Shubhro Bhat
 
 Populism and Public Services Delivery
 
+Trade Reform and Political Power: Connections between Firms and Politicians in India (with Sebastian J\"{a}verall and Roza Khoban)
+
 ## Publications
 
 [Development Research at High Geographic Resolution: An Analysis of Night Lights,
