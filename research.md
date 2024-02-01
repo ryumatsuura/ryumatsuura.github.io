@@ -30,5 +30,5 @@ Harnessing Satellite Data to Improve Social Assistance Targeting in the Eastern 
 
 Populism and Public Services Delivery
 
-Trade Reform and Political Power: Connections between Firms and Politicians in India (with Sebastian J&auml;verall and Roza Khoban)
+Trade Reform and Political Power: Connections between Firms and Politicians in India (with Sebastian J&auml;vervall and Roza Khoban)
 
