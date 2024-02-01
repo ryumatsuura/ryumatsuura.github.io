@@ -4,15 +4,9 @@ title: Research
 slug: /research
 ---
 
-## Work in Progress
+## Working Papers
 
-Harnessing Satellite Data to Improve Social Assistance Targeting in the Eastern Caribbean (with Sophia Chen, Flavien Moreau, and Joana Pereira)
-
-Political (Mis)selection: The Role of Historical Institutions (with Shubhro Bhattacharya and Utsav Manjeer)
-
-Populism and Public Services Delivery
-
-Trade Reform and Political Power: Connections between Firms and Politicians in India (with Sebastian J&auml;verall and Roza Khoban)
+[Political (Mis)selection: The Role of Historical Institutions] (https://ryumatsuura.github.io/files/bmm_2024_zamindar.pdf){:target="_blank"} (with Shubhro Bhattacharya and Utsav Manjeer)
 
 ## Publications
 
@@ -30,3 +24,12 @@ _Frontiers in Marine Science_ (2018)
 [The Proposed Park in Maine's North Woods: Preferences of Out-of-State
 Visitors](https://ryumatsuura.github.io/files/mdm_2016_maine.pdf){:target="_blank"} 
 (with Sahan Dissanayake and Andrew Meyer), _Maine Policy Review_ (2016)
+
+## Work in Progress
+
+Harnessing Satellite Data to Improve Social Assistance Targeting in the Eastern Caribbean (with Sophia Chen, Flavien Moreau, and Joana Pereira)
+
+Populism and Public Services Delivery
+
+Trade Reform and Political Power: Connections between Firms and Politicians in India (with Sebastian J&auml;verall and Roza Khoban)
+
