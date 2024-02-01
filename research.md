@@ -6,7 +6,7 @@ slug: /research
 
 ## Working Papers
 
-[Political (Mis)selection: The Role of Historical Institutions] (https://ryumatsuura.github.io/files/bmm_2024_zamindar.pdf){:target="_blank"} (with Shubhro Bhattacharya and Utsav Manjeer)
+[Political (Mis)selection: The Role of Historical Institutions](https://ryumatsuura.github.io/files/bmm_2024_zamindar.pdf){:target="_blank"} (with Shubhro Bhattacharya and Utsav Manjeer)
 
 ## Publications
 
@@ -15,15 +15,14 @@ Firms, and Poverty in India using the SHRUG Open Data Platform](https://ryumatsu
 (with Sam Asher, Toby Lunt, and Paul Novosad), _World Bank
 Economic Review_ (2021)
 
-
-[Shifted Baselines Reduce Willingness to Pay for
+<!---[Shifted Baselines Reduce Willingness to Pay for
 Conservation](https://ryumatsuura.github.io/files/mmsd_2018_okinawa.pdf){:target="_blank"} 
 (with Loren McClenachan, Shah Payal, and Sahan Dissanayake),
 _Frontiers in Marine Science_ (2018)
 
 [The Proposed Park in Maine's North Woods: Preferences of Out-of-State
 Visitors](https://ryumatsuura.github.io/files/mdm_2016_maine.pdf){:target="_blank"} 
-(with Sahan Dissanayake and Andrew Meyer), _Maine Policy Review_ (2016)
+(with Sahan Dissanayake and Andrew Meyer), _Maine Policy Review_ (2016)--->
 
 ## Work in Progress
 
