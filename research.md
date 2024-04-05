@@ -6,7 +6,10 @@ slug: /research
 
 ## Working Papers
 
+[Harnessing Satellite Data to Improve Social Assistance Targeting in the Eastern Caribbean](https://ryumatsuura.github.io/files/cmmp_2024_satellite.pdf){:target="_blank"} (with Sophia Chen, Flavien Moreau, and Joana Pereira)
+
 [Political (Mis)selection: The Role of Historical Institutions](https://ryumatsuura.github.io/files/bmm_2024_zamindar.pdf){:target="_blank"} (with Shubhro Bhattacharya and Utsav Manjeer)
+
 
 ## Publications
 
@@ -25,8 +28,6 @@ Visitors](https://ryumatsuura.github.io/files/mdm_2016_maine.pdf){:target="_blan
 (with Sahan Dissanayake and Andrew Meyer), _Maine Policy Review_ (2016)--->
 
 ## Work in Progress
-
-Harnessing Satellite Data to Improve Social Assistance Targeting in the Eastern Caribbean (with Sophia Chen, Flavien Moreau, and Joana Pereira)
 
 Political Implications of Trade Liberalization: Evidence from India (with Sebastian J&auml;vervall and Roza Khoban)
 
