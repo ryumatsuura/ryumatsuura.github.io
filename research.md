@@ -31,6 +31,4 @@ Visitors](https://ryumatsuura.github.io/files/mdm_2016_maine.pdf){:target="_blan
 
 Political Implications of Trade Liberalization: Evidence from India (with Sebastian J&auml;vervall and Roza Khoban)
 
-Populism and Public Services Delivery
-
 

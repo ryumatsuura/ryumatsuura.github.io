@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  28 MAR 2024 20:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  1 JUL 2024 15:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -312,46 +312,49 @@ LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
 [1
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 256.
+Overfull \hbox (7.97717pt too wide) in paragraph at lines 188--199
+[][] 
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 258.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.256 \end{document}
-                     [2
-
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 256.
+l.258 \end{document}
+                     [2]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 258.
  (./ryumatsuura_cv.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 256.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 256.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 258.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 258.
 Package rerunfilecheck Info: File `ryumatsuura_cv.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 256.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 258.
  ) 
 Here is how much of TeX's memory you used:
- 5699 strings out of 492616
- 82385 string characters out of 6129482
+ 5700 strings out of 492616
+ 82393 string characters out of 6129482
  175034 words of memory out of 5000000
- 9585 multiletter control sequences out of 15000+600000
+ 9586 multiletter control sequences out of 15000+600000
  7489 words of font info for 29 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,6n,27p,306b,325s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,10n,27p,1273b,325s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
 ></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
-/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></
-usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmu10.pfb></us
-r/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.p
-fb>
-Output written on ryumatsuura_cv.pdf (2 pages, 80196 bytes).
+/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></us
+r/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr
+/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmu10.pfb></usr/l
+ocal/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb>
+
+Output written on ryumatsuura_cv.pdf (2 pages, 91085 bytes).
 PDF statistics:
- 41 PDF objects out of 1000 (max. 8388607)
- 30 compressed objects within 1 object stream
+ 45 PDF objects out of 1000 (max. 8388607)
+ 33 compressed objects within 1 object stream
  2 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
