@@ -18,17 +18,19 @@ Firms, and Poverty in India using the SHRUG Open Data Platform](https://ryumatsu
 (with Sam Asher, Toby Lunt, and Paul Novosad), _World Bank
 Economic Review_ (2021)
 
-<!---[Shifted Baselines Reduce Willingness to Pay for
+[Shifted Baselines Reduce Willingness to Pay for
 Conservation](https://ryumatsuura.github.io/files/mmsd_2018_okinawa.pdf){:target="_blank"} 
 (with Loren McClenachan, Shah Payal, and Sahan Dissanayake),
 _Frontiers in Marine Science_ (2018)
 
 [The Proposed Park in Maine's North Woods: Preferences of Out-of-State
 Visitors](https://ryumatsuura.github.io/files/mdm_2016_maine.pdf){:target="_blank"} 
-(with Sahan Dissanayake and Andrew Meyer), _Maine Policy Review_ (2016)--->
+(with Sahan Dissanayake and Andrew Meyer), _Maine Policy Review_ (2016)
 
 ## Work in Progress
 
 Political Implications of Trade Liberalization: Evidence from India (with Sebastian J&auml;vervall and Roza Khoban)
 
 Market Integration and Cost of Borders in Africa (with Robin Burgess, Ameet Morjaria, and Gerard Padr&oacute; i Miquel)
+
+Weather Shocks and Production Outcomes of Firms in Uganda (with Anton Reinicke and Yasuka Tateishi)
