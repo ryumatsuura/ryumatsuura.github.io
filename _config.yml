@@ -26,13 +26,13 @@ footer:
 #      value: YourWeChatUsername
 #      link: "#"
   follow:
-    - name: Twitter
-      link: http://twitter.com/ryu_matsuura
-      username: "@ryu_matsuura"
+#    - name: Twitter
+#      link: http://twitter.com/ryu_matsuura
+#      username: "@ryu_matsuura"
 #    - name: Facebook
 #      link: http://facebook.com/YourFacebookUsername
-#    - name: LinkedIn
-#      link: http://linkedin.com/in/YourLinkedInUsername
+    - name: LinkedIn
+      link: https://www.linkedin.com/in/ryu-matsuura/
     - name: GitHub
       link: http://github.com/ryumatsuura
 #    - name: Dribbble
