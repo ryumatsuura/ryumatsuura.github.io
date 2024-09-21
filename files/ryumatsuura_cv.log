@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  3 JUL 2024 18:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  20 SEP 2024 21:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -226,31 +226,52 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip60
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 15.
+(/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2019/02/28 v2.7b Micro-typographical refinements (RS)
+\MT@toks=\toks20
+\MT@count=\count110
+LaTeX Info: Redefining \textls on input line 790.
+\MT@outer@kern=\dimen116
+LaTeX Info: Redefining \textmicrotypecontext on input line 1336.
+\MT@listname@count=\count111
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+File: microtype-pdftex.def 2019/02/28 v2.7b Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 914.
+LaTeX Info: Redefining \lslig on input line 914.
+\MT@outer@space=\skip61
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2019/02/28 v2.7b microtype main configuration file (RS)
+))
+Package hyperref Info: Option `colorlinks' set `true' on input line 16.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/preprint/fullpage.sty
 Package: fullpage 1999/02/23 1.1 (PWD)
-\FP@margin=\skip61
+\FP@margin=\skip62
 )
 (./ryumatsuura_cv.aux)
 \openout1 = `ryumatsuura_cv.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
  ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 86.
+LaTeX Info: Redefining \selectfont on input line 87.
 \AtBeginShipoutBox=\box29
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/color.sty
@@ -266,83 +287,104 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 
 (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count110
-\scratchdimen=\dimen116
+\scratchcounter=\count112
+\scratchdimen=\dimen117
 \scratchbox=\box30
-\nofMPsegments=\count111
-\nofMParguments=\count112
-\everyMPshowfont=\toks20
-\MPscratchCnt=\count113
-\MPscratchDim=\dimen117
-\MPnumerator=\count114
-\makeMPintoPDFobject=\count115
-\everyMPtoPDFconversion=\toks21
+\nofMPsegments=\count113
+\nofMParguments=\count114
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count115
+\MPscratchDim=\dimen118
+\MPnumerator=\count116
+\makeMPintoPDFobject=\count117
+\everyMPtoPDFconversion=\toks22
 )))
-Package hyperref Info: Link coloring ON on input line 86.
+Package hyperref Info: Link coloring ON on input line 87.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count116
+\c@section@level=\count118
 )
-LaTeX Info: Redefining \ref on input line 86.
-LaTeX Info: Redefining \pageref on input line 86.
-LaTeX Info: Redefining \nameref on input line 86.
+LaTeX Info: Redefining \ref on input line 87.
+LaTeX Info: Redefining \pageref on input line 87.
+LaTeX Info: Redefining \nameref on input line 87.
 
 (./ryumatsuura_cv.out) (./ryumatsuura_cv.out)
 \@outlinefile=\write3
 \openout3 = `ryumatsuura_cv.out'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 95.
+LaTeX Info: Redefining \microtypecontext on input line 87.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `basictext'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 96.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 95.
+(/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 96.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+(/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
-(Font)              using `OT1/cmr/bx/n' instead on input line 101.
+(Font)              using `OT1/cmr/bx/n' instead on input line 102.
 
 [1
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (7.97717pt too wide) in paragraph at lines 185--196
+Overfull \hbox (7.97717pt too wide) in paragraph at lines 190--201
 [][] 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 271.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 276.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.271 \end{document}
+l.276 \end{document}
                      [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 271.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 276.
  (./ryumatsuura_cv.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 271.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 271.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 276.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 276.
 Package rerunfilecheck Info: File `ryumatsuura_cv.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 271.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 276.
  ) 
 Here is how much of TeX's memory you used:
- 5700 strings out of 492616
- 82393 string characters out of 6129482
- 176034 words of memory out of 5000000
- 9586 multiletter control sequences out of 15000+600000
- 7489 words of font info for 29 fonts, out of 8000000 for 9000
+ 7270 strings out of 492616
+ 110246 string characters out of 6129482
+ 238340 words of memory out of 5000000
+ 11098 multiletter control sequences out of 15000+600000
+ 8563 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,10n,27p,1273b,325s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 31i,10n,38p,1526b,335s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
 ></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
@@ -351,10 +393,10 @@ r/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr
 /local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmu10.pfb></usr/l
 ocal/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb>
 
-Output written on ryumatsuura_cv.pdf (2 pages, 93177 bytes).
+Output written on ryumatsuura_cv.pdf (2 pages, 93175 bytes).
 PDF statistics:
  45 PDF objects out of 1000 (max. 8388607)
  33 compressed objects within 1 object stream
  2 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 12801 words of extra memory for PDF output out of 14400 (max. 10000000)
 
