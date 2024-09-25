@@ -6,7 +6,7 @@ slug: /research
 
 ## Working Papers
 
-[Harnessing Satellite Data to Improve Social Assistance Targeting in the Eastern Caribbean](https://ryumatsuura.github.io/files/cmmp_2024_satellite.pdf){:target="_blank"} (with Sophia Chen, Flavien Moreau, and Joana Pereira)
+[Harnessing Satellite Data to Improve Social Assistance Targeting in the Eastern Caribbean](https://ryumatsuura.github.io/files/cmmp_2024_satellite.pdf){:target="_blank"} (with Sophia Chen, Flavien Moreau, and Joana Pereira), _submitted_
 
 [Political (Mis)selection: The Role of Historical Institutions](https://ryumatsuura.github.io/files/bmm_2024_zamindar.pdf){:target="_blank"} (with Shubhro Bhattacharya and Utsav Manjeer)
 
