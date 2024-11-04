@@ -29,7 +29,7 @@ Visitors](https://ryumatsuura.github.io/files/mdm_2016_maine.pdf){:target="_blan
 
 ## Work in Progress
 
-Political Implications of Trade Liberalization: Evidence from India (with Sebastian J&auml;vervall and Roza Khoban)
+<!-- Political Implications of Trade Liberalization: Evidence from India (with Sebastian J&auml;vervall and Roza Khoban) -->
 
 Market Integration and Cost of Borders in Africa (with Robin Burgess, Ameet Morjaria, and Gerard Padr&oacute; i Miquel)
 
