@@ -13,8 +13,6 @@ header:
   pages:
     - name: Home
       slug: /
-    - name: Job Market Paper
-      slug: /jmp
     - name: Research
     - name: CV
       slug: "https://ryumatsuura.github.io/files/ryumatsuura_cv.pdf"

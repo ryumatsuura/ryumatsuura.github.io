@@ -8,7 +8,7 @@ profile_picture:
 ---
 
 <p>
-I am a sixth-year economics PhD candidate at Northwestern University and am currently on the 2024-25 job market. My research interest lies at the intersection of development economics and political economy. 
+I am a sixth-year economics PhD candidate at Northwestern University. My research interest lies at the intersection of development economics and political economy. 
 </p>
 
 <p>

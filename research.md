@@ -8,6 +8,8 @@ slug: /research
 
 [Harnessing Satellite Data to Improve Social Assistance Targeting in the Eastern Caribbean](https://ryumatsuura.github.io/files/cmmp_2024_satellite.pdf){:target="_blank"} (with Sophia Chen, Flavien Moreau, and Joana Pereira), _submitted_
 
+[Political Implications of Trade Liberalization: Evidence from India](https://ryumatsuura.github.io/files/jkm_2024_india.pdf){:target="_blank"} (with Sebastian J&auml;vervall and Roza Khoban)
+
 [Political (Mis)selection: The Role of Historical Institutions](https://ryumatsuura.github.io/files/bmm_2024_zamindar.pdf){:target="_blank"} (with Shubhro Bhattacharya and Utsav Manjeer)
 
 
@@ -28,8 +30,6 @@ Visitors](https://ryumatsuura.github.io/files/mdm_2016_maine.pdf){:target="_blan
 (with Sahan Dissanayake and Andrew Meyer), _Maine Policy Review_ (2016)
 
 ## Work in Progress
-
-<!-- Political Implications of Trade Liberalization: Evidence from India (with Sebastian J&auml;vervall and Roza Khoban) -->
 
 Market Integration and Cost of Borders in Africa (with Robin Burgess, Ameet Morjaria, and Gerard Padr&oacute; i Miquel)
 
