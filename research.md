@@ -6,7 +6,7 @@ slug: /research
 
 ## Working Papers
 
-[Harnessing Satellite Data to Improve Social Assistance Targeting in the Eastern Caribbean](https://ryumatsuura.github.io/files/cmmp_2024_satellite.pdf){:target="_blank"} (with Sophia Chen, Flavien Moreau, and Joana Pereira), _submitted_
+[Harnessing Satellite Data to Improve Social Assistance Targeting in the Eastern Caribbean](https://ryumatsuura.github.io/files/cmmp_2024_satellite.pdf){:target="_blank"} (with Sophia Chen, Flavien Moreau, and Joana Pereira), _Under Review_
 
 [Political Implications of Trade Liberalization: Evidence from India](https://ryumatsuura.github.io/files/jkm_2024_india.pdf){:target="_blank"} (with Sebastian J&auml;vervall and Roza Khoban)
 
