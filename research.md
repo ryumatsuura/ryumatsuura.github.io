@@ -32,5 +32,3 @@ Visitors](https://ryumatsuura.github.io/files/mdm_2016_maine.pdf){:target="_blan
 ## Work in Progress
 
 Market Integration and Cost of Borders in Africa (with Robin Burgess, Ameet Morjaria, and Gerard Padr&oacute; i Miquel)
-
-Weather Shocks and Production Outcomes of Firms in Uganda (with Anton Reinicke and Yasuka Tateishi)
