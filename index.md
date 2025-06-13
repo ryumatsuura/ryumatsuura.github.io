@@ -12,7 +12,7 @@ I am a Researcher at Nesta's "A Healthy Life" mission based in London.
 </p>
 
 <p>
-I received my PhD in Economics from Northwestern University. My research interest lies at the intersection of development economics and political economy. 
+I received my PhD in Economics from Northwestern University in 2025. My research interest lies at the intersection of development economics and political economy. 
 <p>
 
 <p>
