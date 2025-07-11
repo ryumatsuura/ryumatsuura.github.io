@@ -16,6 +16,7 @@ header:
     - name: Research
     - name: CV
       slug: "https://ryumatsuura.github.io/files/ryumatsuura_cv.pdf"
+    - name: Code
 
 footer:
   show_powered_by: true
