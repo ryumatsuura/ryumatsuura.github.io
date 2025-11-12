@@ -8,7 +8,7 @@ slug: /research
 
 [Harnessing Satellite Data to Improve Social Assistance Targeting in the Eastern Caribbean](https://ryumatsuura.github.io/files/cmmp_2024_satellite.pdf){:target="_blank"} (with Sophia Chen, Flavien Moreau, and Joana Pereira), _Under Review_
 
-[Political Implications of Trade Liberalization: Evidence from India](https://ryumatsuura.github.io/files/jkm_2024_india.pdf){:target="_blank"} (with Sebastian J&auml;vervall and Roza Khoban)
+[Unequal Gains from Trade and the Distribution of Political Power in India](https://www.dropbox.com/scl/fi/ifdqpj7yt0qbd8hrq9lhm/JKM_2025.pdf?rlkey=knaep969urulkwxjqvdmp2imh&e=1&st=1dfc2grd&dl=0){:target="_blank"} (with Sebastian J&auml;vervall and Roza Khoban)
 
 [Political (Mis)selection: The Role of Historical Institutions](https://ryumatsuura.github.io/files/bmm_2024_zamindar.pdf){:target="_blank"} (with Shubhro Bhattacharya and Utsav Manjeer)
 
