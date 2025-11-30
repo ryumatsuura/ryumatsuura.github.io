@@ -3,7 +3,7 @@
 
 title: Ryu Matsuura
 description: >- # this means to ignore newlines until "baseurl:"
-  PhD student in economics
+  Economist with causal inference and data science expertise
 baseurl: "/" # the subpath of the site
 url: "https://ryumatsuura.github.io" # the base hostname & protocol for the site
 og_image: /assets/img/profile-pic.jpeg
@@ -22,7 +22,7 @@ footer:
   show_powered_by: true
   contact:
     - name: Email
-      link: mailto:ryumatsuura@u.northwestern.edu
+      link: mailto:rmatsuura.ryu@gmail.com
 #    - name: WeChat
 #      value: YourWeChatUsername
 #      link: "#"

@@ -20,5 +20,5 @@ I previously worked at <a href="http://www.devdatalab.org">Development Data Lab<
 </p>
 
 <p>
-Please feel free to reach out to me at ryumatsuura [at] u.northwestern.edu!
+Please feel free to reach out to me at rmatsuura.ryu [at] gmail.com!
 </p>
