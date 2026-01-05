@@ -31,6 +31,4 @@ Visitors](https://ryumatsuura.github.io/files/mdm_2016_maine.pdf){:target="_blan
 
 ## Work in Progress
 
-Market Integration and Cost of Borders in Africa (with R. Burgess, A. Morjaria, and G. Padr&oacute; i Miquel)
-
 Reducing the Availability of Discretionary Items in SHops (RADISH): A stepped wedge cluster randomised trial in a UK surplus food community supermarket (with D. Hillard, T. Panayotidis, J. King, L. Gallagher, H. Forde, P. Scarborough, H. Harper, D. Dearlove)
