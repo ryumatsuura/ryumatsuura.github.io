@@ -11,7 +11,3 @@ I developed a primitive version of an R package for masala-merge, a fuzzy string
 ### [Japanese Pension Simulator](https://ryumatsuura.github.io/code/pension-simulator.html){:target="_blank"}
 
 I developed a Python-based simulator to compare the Japanese pension system with the opportunity cost of investment.
-
-### [Random Destination Selector](https://destination-selector.fly.dev/){:target="_blank"}
-
-I developed a Python-based code that randomly selects a trip destination in your chosen country.
