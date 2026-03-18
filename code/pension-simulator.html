@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>国民年金シミュレーター</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --ink:       #0e0f13;
+      --paper:     #f5f3ee;
+      --warm:      #ede9e0;
+      --rule:      #d4cfc4;
+      --red:       #c0392b;
+      --blue:      #1a56a0;
+      --muted:     #7a7469;
+      --serif:     'Noto Sans JP', sans-serif;
+      --mono:      'DM Mono', monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--serif);
+      font-weight: 300;
+      min-height: 100vh;
+    }
+
+    /* ── masthead ── */
+    .masthead {
+      border-bottom: 3px double var(--ink);
+      padding: 2.5rem 2rem 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: end;
+      gap: 1rem;
+    }
+    .masthead-flag { font-size: 2.2rem; line-height: 1; }
+    .masthead h1 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 700;
+      letter-spacing: -.02em;
+      line-height: 1.15;
+    }
+    .masthead h1 small {
+      display: block;
+      font-size: .65em;
+      font-weight: 300;
+      color: var(--muted);
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+    .masthead-date {
+      font-family: var(--mono);
+      font-size: .72rem;
+      color: var(--muted);
+      text-align: right;
+      line-height: 1.7;
+      border-left: 1px solid var(--rule);
+      padding-left: 1rem;
+    }
+
+    /* ── body layout ── */
+    .body-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+    @media (max-width: 760px) {
+      .body-wrap { grid-template-columns: 1fr; }
+    }
+
+    /* ── lede text ── */
+    .lede {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border: 1px solid var(--ink);
+      margin-bottom: .5rem;
+    }
+    @media (max-width: 640px) { .lede { grid-template-columns: 1fr; } }
+    .lede-block {
+      padding: 1rem 1.2rem;
+      font-size: .85rem;
+      line-height: 1.75;
+      color: var(--muted);
+    }
+    .lede-block:first-child { border-right: 1px solid var(--rule); }
+    .lede-block strong { color: var(--ink); font-weight: 500; }
+
+    /* ── section label ── */
+    .section-label {
+      font-family: var(--mono);
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: .4rem;
+      margin-bottom: 1.2rem;
+    }
+
+    /* ── controls panel ── */
+    .controls {
+      border: 1px solid var(--ink);
+      padding: 1.5rem;
+      position: sticky;
+      top: 1.5rem;
+    }
+
+    .field { margin-bottom: 1.3rem; }
+    .field-label {
+      font-size: .78rem;
+      font-weight: 500;
+      margin-bottom: .5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .field-label span {
+      font-family: var(--mono);
+      font-size: .7rem;
+      color: var(--blue);
+      font-weight: 400;
+    }
+    .field-sub { font-size: .7rem; color: var(--muted); margin-bottom: .5rem; }
+
+    /* radio toggle */
+    .toggle { display: flex; border: 1px solid var(--ink); }
+    .toggle input { display: none; }
+    .toggle label {
+      flex: 1; text-align: center; padding: .45rem .5rem;
+      font-size: .78rem; cursor: pointer; transition: background .15s, color .15s;
+      color: var(--muted);
+    }
+    .toggle label:first-of-type { border-right: 1px solid var(--ink); }
+    .toggle input:checked + label { background: var(--ink); color: var(--paper); }
+
+    /* slider */
+    .slider-row { display: flex; align-items: center; gap: .6rem; }
+    input[type="range"] {
+      flex: 1; -webkit-appearance: none; height: 2px;
+      background: var(--rule); cursor: pointer;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none; width: 14px; height: 14px;
+      border-radius: 50%; background: var(--ink); cursor: pointer;
+      border: 2px solid var(--paper); box-shadow: 0 0 0 1px var(--ink);
+    }
+    .slider-num {
+      font-family: var(--mono); font-size: .78rem;
+      min-width: 2.5rem; text-align: right; color: var(--blue);
+    }
+
+    /* paired inputs */
+    .pair { display: flex; gap: .5rem; align-items: center; }
+    .pair input {
+      flex: 1; width: 0;
+      background: var(--warm); border: 1px solid var(--rule);
+      color: var(--ink); padding: .4rem .6rem;
+      font-family: var(--mono); font-size: .82rem;
+      transition: border-color .15s;
+    }
+    .pair input:focus { outline: none; border-color: var(--ink); }
+    .pair-sep { color: var(--muted); font-size: .8rem; white-space: nowrap; }
+
+    /* run button */
+    .btn-run {
+      width: 100%; margin-top: 1.5rem;
+      padding: .8rem; border: 2px solid var(--ink);
+      background: var(--ink); color: var(--paper);
+      font-family: var(--mono); font-size: .8rem;
+      letter-spacing: .1em; text-transform: uppercase;
+      cursor: pointer; transition: background .15s, color .15s;
+    }
+    .btn-run:hover:not(:disabled) { background: var(--paper); color: var(--ink); }
+    .btn-run:disabled { opacity: .45; cursor: not-allowed; }
+
+    /* ── results panel ── */
+    .results { min-height: 200px; }
+
+    /* metrics row */
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid var(--ink);
+      margin-bottom: 1.5rem;
+    }
+    @media (max-width: 500px) { .metrics { grid-template-columns: 1fr; } }
+    .metric {
+      padding: 1rem 1.1rem;
+      border-right: 1px solid var(--rule);
+    }
+    .metric:last-child { border-right: none; }
+    .metric-label {
+      font-family: var(--mono); font-size: .6rem;
+      letter-spacing: .1em; text-transform: uppercase; color: var(--muted);
+      margin-bottom: .3rem;
+    }
+    .metric-value {
+      font-family: var(--mono); font-size: 1.35rem;
+      font-weight: 500; color: var(--ink);
+    }
+    .metric-value.up   { color: var(--blue); }
+    .metric-value.down { color: var(--red); }
+
+    /* chart */
+    .chart-wrap {
+      border: 1px solid var(--ink);
+      padding: 1.2rem 1.2rem 1rem;
+    }
+    .chart-wrap canvas { width: 100% !important; }
+
+    /* placeholder */
+    .placeholder {
+      border: 1px dashed var(--rule);
+      padding: 4rem 2rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: .85rem;
+      line-height: 1.8;
+    }
+
+    /* spinner */
+    .spinner {
+      display: inline-block; width: 12px; height: 12px;
+      border: 1.5px solid rgba(245,243,238,.4); border-top-color: var(--paper);
+      border-radius: 50%; animation: spin .6s linear infinite;
+      vertical-align: middle; margin-right: .4rem;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* footnote */
+    .footnote {
+      grid-column: 1 / -1;
+      font-size: .72rem; color: var(--muted);
+      border-top: 1px solid var(--rule);
+      padding-top: .8rem; margin-top: 1rem;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+
+<header class="masthead">
+  <div>
+    <div class="masthead-flag">🇯🇵</div>
+    <h1>
+      国民年金シミュレーター
+      <small>Japanese National Pension Simulator</small>
+    </h1>
+  </div>
+  <div class="masthead-date">
+    月額保険料<br>¥17,510 (2025年度)<br>満額受給額<br>¥831,700
+  </div>
+</header>
+
+<div class="body-wrap">
+
+  <div class="lede">
+    <div class="lede-block">
+      <strong>このシミュレーターについて</strong><br>
+      海外に転出した日本人は、国民年金への加入が任意となります。任意加入して年金を受給した場合と、その分を海外投資に回した場合の将来価値を比較します。
+    </div>
+    <div class="lede-block">
+      <strong>計算方法</strong><br>
+      金利・為替・投資リターンにランダムなばらつきを加えた 10,000 回のモンテカルロシミュレーションにより、年金と投資の現在価値の分布を算出します。
+    </div>
+  </div>
+
+  <!-- ── Controls ── -->
+  <aside class="controls">
+    <div class="section-label">パラメーター設定</div>
+
+    <div class="field">
+      <div class="field-label">受け取り通貨 <span>Currency</span></div>
+      <div class="toggle">
+        <input type="radio" name="currency" id="cur-jpy" value="JPY" checked>
+        <label for="cur-jpy">日本円 JPY</label>
+        <input type="radio" name="currency" id="cur-fgn" value="foreign">
+        <label for="cur-fgn">外貨 Foreign</label>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="field-label">支払い期間 <span id="yc-val">25 年</span></div>
+      <div class="field-sub">Years of contribution</div>
+      <div class="slider-row">
+        <input type="range" id="years_contrib" min="1" max="40" value="25"
+          oninput="document.getElementById('yc-val').textContent=this.value+' 年'">
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="field-label">受給期間 <span id="yr-val">25 年</span></div>
+      <div class="field-sub">Years to receive pension</div>
+      <div class="slider-row">
+        <input type="range" id="years_receive" min="1" max="40" value="25"
+          oninput="document.getElementById('yr-val').textContent=this.value+' 年'">
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="field-label" id="rate-label">金利 (%) <span>Mean ± SD</span></div>
+      <div class="field-sub">Interest rate — average / std dev</div>
+      <div class="pair">
+        <input type="number" id="interest_rate" value="1.0" min="0" max="15" step="0.1">
+        <span class="pair-sep">±</span>
+        <input type="number" id="interest_rate_sd" value="0.5" min="0" max="15" step="0.1">
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="field-label">投資リターン (%) <span>Mean ± SD</span></div>
+      <div class="field-sub">Foreign investment return — average / std dev</div>
+      <div class="pair">
+        <input type="number" id="annual_return" value="5.0" min="0" max="30" step="0.1">
+        <span class="pair-sep">±</span>
+        <input type="number" id="annual_return_sd" value="2.5" min="0" max="30" step="0.1">
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="field-label">為替レート (¥) <span>Mean ± SD</span></div>
+      <div class="field-sub">Exchange rate — average / std dev</div>
+      <div class="pair">
+        <input type="number" id="exchange_rate" value="200" min="0" max="1000" step="1">
+        <span class="pair-sep">±</span>
+        <input type="number" id="exchange_rate_sd" value="20" min="0" max="1000" step="1">
+      </div>
+    </div>
+
+    <button class="btn-run" id="run-btn" onclick="runSimulation()">
+      シミュレーション実行
+    </button>
+  </aside>
+
+  <!-- ── Results ── -->
+  <main class="results">
+    <div class="section-label">シミュレーション結果</div>
+
+    <div class="metrics" id="metrics" style="display:none">
+      <div class="metric">
+        <div class="metric-label">年金の現在価値（平均）</div>
+        <div class="metric-value" id="r-pension">—</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">投資の価値（平均）</div>
+        <div class="metric-value" id="r-invest">—</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">年金が投資を上回る確率</div>
+        <div class="metric-value" id="r-ratio">—</div>
+      </div>
+    </div>
+
+    <div class="chart-wrap" id="chart-wrap" style="display:none">
+      <canvas id="sim-chart"></canvas>
+    </div>
+
+    <div class="placeholder" id="placeholder">
+      パラメーターを設定して「シミュレーション実行」を押してください。<br>
+      <span style="font-size:.75rem">Set parameters and press Run Simulation.</span>
+    </div>
+  </main>
+
+  <p class="footnote">
+    ※ 月額保険料 17,510円（2025年度）、満額受給額 831,700円として計算。障害年金・遺族年金および各種手数料は考慮していません。
+    本シミュレーターの内容に誤りがある場合はご指摘ください。
+  </p>
+
+</div><!-- /body-wrap -->
+
+<script>
+// ─────────────────────────────────────────────
+// Constants (from config.py)
+// ─────────────────────────────────────────────
+const MONTHLY_CONTRIBUTION = 17510;
+const MAX_ANNUAL_RECEIPT   = 831700;
+
+// ─────────────────────────────────────────────
+// Seedable PRNG — Mulberry32 (fast, good quality)
+// ─────────────────────────────────────────────
+function mulberry32(seed) {
+  return function() {
+    seed |= 0; seed = seed + 0x6D2B79F5 | 0;
+    let t = Math.imul(seed ^ seed >>> 15, 1 | seed);
+    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+    return ((t ^ t >>> 14) >>> 0) / 4294967296;
+  };
+}
+
+// Box-Muller using our seeded RNG
+function makeNormalSampler(rng) {
+  let spare = null;
+  return function(mean, sd) {
+    if (spare !== null) {
+      const v = spare; spare = null;
+      return mean + sd * v;
+    }
+    let u, v, s;
+    do {
+      u = rng() * 2 - 1;
+      v = rng() * 2 - 1;
+      s = u * u + v * v;
+    } while (s >= 1 || s === 0);
+    const mul = Math.sqrt(-2 * Math.log(s) / s);
+    spare = v * mul;
+    return mean + sd * (u * mul);
+  };
+}
+
+// ─────────────────────────────────────────────
+// core.js — direct port of core.py
+// ─────────────────────────────────────────────
+function convertJpyForeign(value, exchangeRate) {
+  return value / exchangeRate;
+}
+
+function determineAnnualReceiptJpy(yearsOfContribution) {
+  if (yearsOfContribution > 40) throw new Error("Years of contribution cannot exceed 40.");
+  return MAX_ANNUAL_RECEIPT * (yearsOfContribution * 12 / 480);
+}
+
+function calculatePresentValuePension(
+  yearsOfContribution, interestRateSchedule,
+  yearsToReceive, exchangeRateSchedule, currencyJpy
+) {
+  const annualReceipt = determineAnnualReceiptJpy(yearsOfContribution);
+  let pv = 0;
+  for (let t = 0; t < yearsToReceive; t++) {
+    const r = interestRateSchedule[t] / 100;
+    if (currencyJpy) {
+      pv += annualReceipt / Math.pow(1 + r, t);
+    } else {
+      const fx = exchangeRateSchedule[t];
+      pv += convertJpyForeign(annualReceipt, fx) / Math.pow(1 + r, t);
+    }
+  }
+  return pv;
+}
+
+function determineFutureReturnInvestment(annualContribution, annualReturn, years) {
+  return annualContribution * Math.pow(1 + annualReturn / 100, years);
+}
+
+function calculateTotalInvestmentReturn(
+  contributionSchedule, returnRateSchedule, exchangeRate, currencyJpy
+) {
+  const years = contributionSchedule.length;
+  let total = 0;
+  for (let y = 0; y < years; y++) {
+    const contrib = contributionSchedule[y];
+    const ret    = returnRateSchedule[y];
+    const yrs    = years - y;
+    total += determineFutureReturnInvestment(contrib, ret, yrs);
+  }
+  if (currencyJpy) return convertJpyForeign(total, 1 / exchangeRate);
+  return total;
+}
+
+function createSchedule(mean, sd, years, normal) {
+  return Array.from({ length: years }, () => normal(mean, sd));
+}
+
+// ─────────────────────────────────────────────
+// simulation.js — port of simulation.py
+// ─────────────────────────────────────────────
+function freedmanDiaconisBins(data) {
+  const sorted = [...data].sort((a, b) => a - b);
+  const n = sorted.length;
+  const q25 = sorted[Math.floor(n * 0.25)];
+  const q75 = sorted[Math.floor(n * 0.75)];
+  const iqr = q75 - q25;
+  const binWidth = 2 * iqr * Math.pow(n, -1/3);
+  if (binWidth <= 0) return 50;
+  return Math.ceil((sorted[n-1] - sorted[0]) / binWidth);
+}
+
+function buildHistogram(data, nBins) {
+  const min = Math.min(...data);
+  const max = Math.max(...data);
+  const width = (max - min) / nBins;
+  const counts = new Array(nBins).fill(0);
+  for (const v of data) {
+    let i = Math.floor((v - min) / width);
+    if (i >= nBins) i = nBins - 1;
+    counts[i]++;
+  }
+  const total = data.length * width;   // normalise to density
+  return {
+    labels: Array.from({ length: nBins }, (_, i) => min + (i + 0.5) * width),
+    density: counts.map(c => c / total),
+    width,
+  };
+}
+
+function runSimulation({
+  yearsToReceive, interestRateMean, interestRateSd,
+  yearsOfContribution, exchangeRateMean, exchangeRateSd,
+  returnMean, returnSd, currencyJpy,
+  nSimulations = 10000,
+}) {
+  const rng    = mulberry32(42);
+  const normal = makeNormalSampler(rng);
+
+  const pensions     = [];
+  const investments  = [];
+
+  for (let i = 0; i < nSimulations; i++) {
+    const interestRateSchedule   = createSchedule(interestRateMean,  interestRateSd,  yearsToReceive,      normal);
+    const fxScheduleContribution = createSchedule(exchangeRateMean,  exchangeRateSd,  yearsOfContribution, normal);
+    const fxScheduleReceipt      = createSchedule(exchangeRateMean,  exchangeRateSd,  yearsToReceive,      normal);
+    const returnRateSchedule     = createSchedule(returnMean,        returnSd,        yearsOfContribution, normal);
+
+    const contributionSchedule = fxScheduleContribution.map(
+      fx => convertJpyForeign(MONTHLY_CONTRIBUTION * 12, fx)
+    );
+
+    const finalFx = normal(exchangeRateMean, exchangeRateSd);
+
+    const pvPension = calculatePresentValuePension(
+      yearsOfContribution, interestRateSchedule,
+      yearsToReceive, fxScheduleReceipt, currencyJpy
+    );
+    const totalInvestment = calculateTotalInvestmentReturn(
+      contributionSchedule, returnRateSchedule, finalFx, currencyJpy
+    );
+
+    pensions.push(pvPension);
+    investments.push(totalInvestment);
+  }
+
+  const pensionBetterRatio = pensions.filter((p, i) => p > investments[i]).length / nSimulations;
+  const meanPension    = pensions.reduce((a, b) => a + b, 0) / nSimulations;
+  const meanInvestment = investments.reduce((a, b) => a + b, 0) / nSimulations;
+
+  return { pensions, investments, pensionBetterRatio, meanPension, meanInvestment };
+}
+
+// ─────────────────────────────────────────────
+// Chart rendering
+// ─────────────────────────────────────────────
+let chartInstance = null;
+
+function renderChart(pensions, investments, currencyJpy) {
+  const sym = currencyJpy ? '¥' : '$';
+
+  const nBinsP = Math.min(freedmanDiaconisBins(pensions), 120);
+  const nBinsI = Math.min(freedmanDiaconisBins(investments), 120);
+  const histP  = buildHistogram(pensions, nBinsP);
+  const histI  = buildHistogram(investments, nBinsI);
+
+  const fmt = v => {
+    if (Math.abs(v) >= 1e6) return sym + (v/1e6).toFixed(1) + 'M';
+    if (Math.abs(v) >= 1e4) return sym + (v/1e3).toFixed(0) + 'k';
+    return sym + v.toFixed(0);
+  };
+
+  if (chartInstance) { chartInstance.destroy(); chartInstance = null; }
+
+  const ctx = document.getElementById('sim-chart').getContext('2d');
+  chartInstance = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      datasets: [
+        {
+          label: '年金 Pension',
+          data: histP.labels.map((x, i) => ({ x, y: histP.density[i] })),
+          backgroundColor: 'rgba(26, 86, 160, 0.45)',
+          borderColor:     'rgba(26, 86, 160, 0.8)',
+          borderWidth: 1,
+          barPercentage: 1.0, categoryPercentage: 1.0,
+          barThickness: 'flex',
+          yAxisID: 'yP',
+        },
+        {
+          label: '投資 Investment',
+          data: histI.labels.map((x, i) => ({ x, y: histI.density[i] })),
+          backgroundColor: 'rgba(192, 57, 43, 0.35)',
+          borderColor:     'rgba(192, 57, 43, 0.75)',
+          borderWidth: 1,
+          barPercentage: 1.0, categoryPercentage: 1.0,
+          barThickness: 'flex',
+          yAxisID: 'yI',
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      animation: { duration: 400 },
+      plugins: {
+        legend: {
+          labels: {
+            font: { family: "'DM Mono', monospace", size: 11 },
+            color: '#0e0f13',
+          }
+        },
+        tooltip: {
+          callbacks: {
+            title: items => fmt(items[0].parsed.x),
+            label: item => ` density: ${item.parsed.y.toExponential(2)}`,
+          }
+        }
+      },
+      scales: {
+        x: {
+          type: 'linear',
+          title: { display: true, text: `Total Amount (${sym})`,
+                   font: { family: "'DM Mono', monospace", size: 11 }, color: '#7a7469' },
+          ticks: {
+            callback: fmt,
+            font: { family: "'DM Mono', monospace", size: 10 }, color: '#7a7469',
+            maxTicksLimit: 8,
+          },
+          grid: { color: '#e8e4db' },
+        },
+        yP: {
+          position: 'left',
+          title: { display: true, text: 'Pension density',
+                   font: { family: "'DM Mono', monospace", size: 10 }, color: 'rgba(26,86,160,.7)' },
+          ticks: { font: { family: "'DM Mono', monospace", size: 9 }, color: 'rgba(26,86,160,.7)' },
+          grid: { color: '#e8e4db' },
+        },
+        yI: {
+          position: 'right',
+          title: { display: true, text: 'Investment density',
+                   font: { family: "'DM Mono', monospace", size: 10 }, color: 'rgba(192,57,43,.7)' },
+          ticks: { font: { family: "'DM Mono', monospace", size: 9 }, color: 'rgba(192,57,43,.7)' },
+          grid: { drawOnChartArea: false },
+        },
+      },
+    },
+  });
+}
+
+// ─────────────────────────────────────────────
+// UI wiring
+// ─────────────────────────────────────────────
+document.querySelectorAll('input[name="currency"]').forEach(r => {
+  r.addEventListener('change', () => {
+    const jpy = r.value === 'JPY';
+    document.getElementById('rate-label').innerHTML =
+      `${jpy ? '日本' : '海外'}の金利 (%) <span>Mean ± SD</span>`;
+  });
+});
+
+function fmtMoney(v, sym) {
+  if (Math.abs(v) >= 1e8) return sym + (v/1e8).toFixed(2) + '億';
+  if (Math.abs(v) >= 1e6) return sym + (v/1e6).toFixed(2) + 'M';
+  if (Math.abs(v) >= 1e4) return sym + (v/1e3).toFixed(1) + 'k';
+  return sym + v.toFixed(0);
+}
+
+function runSimulation() {
+  const btn = document.getElementById('run-btn');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span>計算中…';
+
+  // yield to browser to paint spinner
+  setTimeout(() => {
+    const currencyJpy = document.querySelector('input[name="currency"]:checked').value === 'JPY';
+    const sym = currencyJpy ? '¥' : '$';
+
+    const params = {
+      currencyJpy,
+      yearsOfContribution: parseInt(document.getElementById('years_contrib').value),
+      yearsToReceive:      parseInt(document.getElementById('years_receive').value),
+      interestRateMean:    parseFloat(document.getElementById('interest_rate').value),
+      interestRateSd:      parseFloat(document.getElementById('interest_rate_sd').value),
+      returnMean:          parseFloat(document.getElementById('annual_return').value),
+      returnSd:            parseFloat(document.getElementById('annual_return_sd').value),
+      exchangeRateMean:    parseFloat(document.getElementById('exchange_rate').value),
+      exchangeRateSd:      parseFloat(document.getElementById('exchange_rate_sd').value),
+    };
+
+    const { pensions, investments, pensionBetterRatio, meanPension, meanInvestment } =
+      runSimulation(params);  // note: calls the JS function above
+
+    // metrics
+    const rPension = document.getElementById('r-pension');
+    const rInvest  = document.getElementById('r-invest');
+    rPension.textContent = fmtMoney(meanPension, sym);
+    rInvest.textContent  = fmtMoney(meanInvestment, sym);
+    rPension.className = 'metric-value ' + (meanPension >= meanInvestment ? 'up' : 'down');
+    rInvest.className  = 'metric-value ' + (meanInvestment >= meanPension  ? 'up' : 'down');
+    document.getElementById('r-ratio').textContent = (pensionBetterRatio * 100).toFixed(1) + '%';
+
+    // show panels
+    document.getElementById('placeholder').style.display = 'none';
+    document.getElementById('metrics').style.display     = 'grid';
+    document.getElementById('chart-wrap').style.display  = 'block';
+
+    renderChart(pensions, investments, currencyJpy);
+
+    btn.disabled = false;
+    btn.innerHTML = 'シミュレーション実行';
+  }, 30);
+}
+
+// rename the inner call to avoid infinite recursion
+// (the button calls the outer runSimulation; internally we call the pure function)
+</script>
+
+<!-- fix: rename inner pure function to avoid collision with onclick handler -->
+<script>
+  // The onclick calls window.runSimulation (the UI function above).
+  // Inside it we call runSimulation(params) — that's also the UI function!
+  // Rename the pure computation function here:
+  const _runSimulationPure = runSimulation; // backup
+
+  // Redefine runSimulation as the UI handler, calling a renamed pure fn
+  const computeSimulation = function(p) {
+    const rng    = mulberry32(42);
+    const normal = makeNormalSampler(rng);
+    const pensions = [], investments = [];
+    for (let i = 0; i < (p.nSimulations || 10000); i++) {
+      const ir  = createSchedule(p.interestRateMean, p.interestRateSd, p.yearsToReceive, normal);
+      const fxC = createSchedule(p.exchangeRateMean, p.exchangeRateSd, p.yearsOfContribution, normal);
+      const fxR = createSchedule(p.exchangeRateMean, p.exchangeRateSd, p.yearsToReceive, normal);
+      const rr  = createSchedule(p.returnMean, p.returnSd, p.yearsOfContribution, normal);
+      const cs  = fxC.map(fx => convertJpyForeign(MONTHLY_CONTRIBUTION * 12, fx));
+      const finalFx = normal(p.exchangeRateMean, p.exchangeRateSd);
+      pensions.push(calculatePresentValuePension(p.yearsOfContribution, ir, p.yearsToReceive, fxR, p.currencyJpy));
+      investments.push(calculateTotalInvestmentReturn(cs, rr, finalFx, p.currencyJpy));
+    }
+    const ratio = pensions.filter((v, i) => v > investments[i]).length / pensions.length;
+    return {
+      pensions, investments,
+      pensionBetterRatio: ratio,
+      meanPension:    pensions.reduce((a,b)=>a+b,0)/pensions.length,
+      meanInvestment: investments.reduce((a,b)=>a+b,0)/investments.length,
+    };
+  };
+
+  // Override the UI handler to use computeSimulation
+  window.runSimulation = function() {
+    const btn = document.getElementById('run-btn');
+    btn.disabled = true;
+    btn.innerHTML = '<span class="spinner"></span>計算中…';
+    setTimeout(() => {
+      const currencyJpy = document.querySelector('input[name="currency"]:checked').value === 'JPY';
+      const sym = currencyJpy ? '¥' : '$';
+      const params = {
+        currencyJpy,
+        yearsOfContribution: parseInt(document.getElementById('years_contrib').value),
+        yearsToReceive:      parseInt(document.getElementById('years_receive').value),
+        interestRateMean:    parseFloat(document.getElementById('interest_rate').value),
+        interestRateSd:      parseFloat(document.getElementById('interest_rate_sd').value),
+        returnMean:          parseFloat(document.getElementById('annual_return').value),
+        returnSd:            parseFloat(document.getElementById('annual_return_sd').value),
+        exchangeRateMean:    parseFloat(document.getElementById('exchange_rate').value),
+        exchangeRateSd:      parseFloat(document.getElementById('exchange_rate_sd').value),
+      };
+      const { pensions, investments, pensionBetterRatio, meanPension, meanInvestment } = computeSimulation(params);
+      const rP = document.getElementById('r-pension');
+      const rI = document.getElementById('r-invest');
+      rP.textContent = fmtMoney(meanPension, sym);
+      rI.textContent = fmtMoney(meanInvestment, sym);
+      rP.className = 'metric-value ' + (meanPension >= meanInvestment ? 'up' : 'down');
+      rI.className = 'metric-value ' + (meanInvestment >= meanPension  ? 'up' : 'down');
+      document.getElementById('r-ratio').textContent = (pensionBetterRatio * 100).toFixed(1) + '%';
+      document.getElementById('placeholder').style.display = 'none';
+      document.getElementById('metrics').style.display     = 'grid';
+      document.getElementById('chart-wrap').style.display  = 'block';
+      renderChart(pensions, investments, currencyJpy);
+      btn.disabled = false;
+      btn.innerHTML = 'シミュレーション実行';
+    }, 30);
+  };
+</script>
+
+</body>
+</html>
