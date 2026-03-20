@@ -702,8 +702,8 @@ function runSimulation() {
     const rInvest  = document.getElementById('r-invest');
     rPension.textContent = fmtMoney(meanPension, sym);
     rInvest.textContent  = fmtMoney(meanInvestment, sym);
-    rPension.className = 'metric-value ' + (meanPension >= meanInvestment ? 'up' : 'down');
-    rInvest.className  = 'metric-value ' + (meanInvestment >= meanPension  ? 'up' : 'down');
+    rPension.className = 'metric-value up';    // always blue — matches histogram
+    rInvest.className  = 'metric-value down';  // always red  — matches histogram
     document.getElementById('r-ratio').textContent = (pensionBetterRatio * 100).toFixed(1) + '%';
 
     // show panels
@@ -777,8 +777,8 @@ function runSimulation() {
       const rI = document.getElementById('r-invest');
       rP.textContent = fmtMoney(meanPension, sym);
       rI.textContent = fmtMoney(meanInvestment, sym);
-      rP.className = 'metric-value ' + (meanPension >= meanInvestment ? 'up' : 'down');
-      rI.className = 'metric-value ' + (meanInvestment >= meanPension  ? 'up' : 'down');
+      rP.className = 'metric-value up';    // always blue — matches histogram
+      rI.className = 'metric-value down';  // always red  — matches histogram
       document.getElementById('r-ratio').textContent = (pensionBetterRatio * 100).toFixed(1) + '%';
       document.getElementById('placeholder').style.display = 'none';
       document.getElementById('metrics').style.display     = 'grid';
