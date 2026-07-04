@@ -8,7 +8,7 @@ profile_picture:
 ---
 
 <p>
-I am a Researcher at Nesta's "A Healthy Life" mission based in London.
+I am a data scientist at Expedia in London.
 </p>
 
 <p>
