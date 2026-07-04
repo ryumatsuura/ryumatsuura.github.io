@@ -8,7 +8,7 @@ profile_picture:
 ---
 
 <p>
-I am a data scientist at Expedia in London.
+I am a Data Scientist at Expedia in London.
 </p>
 
 <p>
